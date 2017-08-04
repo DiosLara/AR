@@ -1,0 +1,48 @@
+# AR
+Practica R, 04/08/2017
+a<- 4
+b<- 3
+a+b
+suma<- a+b
+suma
+#OPS LÃGICOS
+a>b
+a>=a
+a<b
+a<=b
+a==b
+a==4
+a!=b 
+##funciÃ³n
+x<-abs(-2.5) 
+x
+##
+x<-"hola"
+z<-6
+##
+ciudad<- "Toluca"
+nombres<- c("Karla", "Rodrigo", "Miguel", "Samuel")
+edad<- c(28,17,49,31)
+class(nombres)
+class(edad)
+
+
+## 
+base1 <- data.frame(nombres,edad)
+ View(base1)
+ ls (base1)
+ base1$edad<- base1$edad1
+ 
+ #ejercicio
+ sexo<- c(2,1,1,1)
+ 
+ base2<- data.frame(nombres, edad, sexo)
+ table(base2$sexo)
+ 
+ ##
+ palumnos<- c(40,120,60,80)
+ etiq<- c("actua", "eco", "ri","ec")
+ pie(palumnos)
+ pie(palumnos,etiq, main="Grafica F.ECO", sub= "Fuente= Facultad de economÃ­a",col= c("blue", "red", "pink", "yellow"),radius= 1, clockwise = TRUE, lty = 11)
+     
+ 
