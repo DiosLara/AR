@@ -1,0 +1,20 @@
+#Facultad economía ingeniaría arquitectura y derecho
+#licenciatura(actuaria,ingeniería civil, arquitectura, derecho), 
+#Calificación alumnos ((6,4,10,8))
+#Verificar con R que tipo de variables son 
+#(numérico y caracter)
+#Borrar las vareiables facultad y licenciatura
+#Graficar con pie lavariable califcación 
+#Incorporar los argumentos utilizados en clase 
+
+fac <- c("economia", "ingenieria", "arquitectura", "derecho")
+lic<- c("actuaria", "ing. civil", "arquitectura", "derecho")
+calif<- c(6,4,10,8)
+class(fac) #char"
+class(lic)#char
+class(calif)#num
+pie(calif)
+pie(calif, main="Grafica calif", sub= "Fuente= Facultad de economía",col = rainbow(4),radius= 1, clockwise = TRUE, lty = 11)
+
+
+
