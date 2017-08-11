@@ -1,0 +1,56 @@
+
+#3 Secuencias que generen: 
+#450 datos que su secuencia sea de 50 en 50 datos. Pedir a R el dato 10
+#Dos mil datos que su secuencia sea de .3 en .3. Pedir a R datos 3,15,800 y 1999
+#Ejercicio de datos aleatorios. 
+#Suponemos que una empresa que quiere estimar una pensión para sus trabajadores en base en la antiguedad,
+#en lo que se requiere estimar una muestra de 500 trabajadores y que sus rangos de antiguedad sean desde 0 a 30 años. 
+#Pedir a R el último dato de esta muestra 
+#2)Generar una muestra de 50,000 con un rango de 0 a 100,000.
+#3) Generar una muestra de 50 datos que tengan un rango de 10 a 19, pedir los datos 34, 43,49
+(a<-seq(from=1, to=450*50,by=50))
+a[10]
+(b<-seq(1,2000,.3))
+b[c(3,15,800,1999)]
+c<-sample(0:30,500, replace=T)
+c[length(c)]
+sample(0:100000,size=50000, replace=T)
+d<-sample(10:19,size=50, replace=T)
+d[d(34,43,49)]
+
+
+#Matrices
+e<- 1:10
+#para convertirla en matriz se utiliza dim
+dim(e)<- c(2,5) #matriz de 2 renglones y 5 columnas 
+View(e)
+class(e)
+dim(e)<-c(5,2) #matriz de 5 renglones y 2 columnas
+View(e)
+#para mandar llamar especificamente un dato de lamatriz
+e[5,2]# aqui mando llamar el dato del renglon 5 y columna 2
+e[3,2]
+#si solo queremos conocer los valores de una columna
+e[,2]
+e[,1]
+#para valores de renglones
+e[3,]#valores renglon 3
+e[,2]#valores columna 2 
+
+#como crear matrices con fn matrix
+f<-matrix(110:119,nrow=5,ncol=2,byrow=TRUE)
+f
+g<-matrix(1:10,nrow=5,ncol=2)
+g
+#tambien se le pueden asignar nombres a renglones y columnas de las matrices
+rownames(f)<-c("manzana","naranja","piña",",melon","mango")
+colnames(f)<-c("mercado1","mercado2")
+f
+#para saber los datos de una columna
+f["manzana","mercado2"]
+View(f)
+h<- matrix(2:21,nrow=4,ncol=5)
+#otra forma de generar matrices
+i<-rbind(1:2,4:3, c(5,6),c(2,7),c(8,9))
+i
+#cada argumento se define un renglon
