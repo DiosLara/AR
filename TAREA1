@@ -1,0 +1,39 @@
+###################### ejercicio matrices########
+##### 1) crear una matriz con la funciÃ³n dim() de 4 columnas 
+#y 5 renglones, ##esta matriz esta basada en un vector que contiene
+estos 
+#datos 11:31 
+## el nombre de los renglones es el siguiente (toluca, 
+#pachuca, gdl, mty)
+## el nombre de las columnas es (escuela1, escuela2, escuela3, 
+#escuela4, escuela5)
+## Incorporar el nombre a los renglones y columnas de la matriz
+## identificar el dato de la escuela 3 de toluca, de la escuela 5 de gdl y la escuela 1 de pachuca
+###### 2) crear con la funciÃ³n matrix una matriz de 6 renglones
+## y 3 columnas.... y preguntar por el dato de la matriz en el 
+## renglon 3 y columna 3
+
+###################### ejercicio matrices########
+##### 1) crear una matriz con la funciÃ³n dim() de 4 columnas 
+#y 5 renglones, ##esta matriz esta basada en un vector que contiene
+#estos 
+#datos 11:31 
+## el nombre de los renglones es el siguiente (toluca, 
+#pachuca, gdl, mty)
+## el nombre de las columnas es (escuela1, escuela2, escuela3, 
+#escuela4, escuela5)
+## Incorporar el nombre a los renglones y columnas de la matriz
+## identificar el dato de la escuela 3 de toluca, de la escuela 5 de gdl y la escuela 1 de pachuca
+###### 2) crear con la funciÃ³n matrix una matriz de 6 renglones
+## y 3 columnas.... y preguntar por el dato de la matriz en el 
+## renglon 3 y columna 3
+datos<- 11:30
+dim(datos)<- c(4,5)
+rownames(datos)<- c("Toluca", "Pachuca", "Gdl", "Mty")
+colnames(datos)<- c("escuela1", "escuela2", "escuela3", "escuela4", "escuela5")
+datos["Toluca","escuela3"]
+datos["Gdl","escuela5"]
+datos["Pachuca","escuela1"]
+
+datos1<- matrix(11:28, nrow=6, ncol=3)
+datos1[3,3]
