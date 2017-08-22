@@ -5,3 +5,4 @@ chart_link
 X11()
 barplot(t, main="Grupos de edad", xlab="Gpos edades",ylab="Cantidad", col = c("lightblue", "mistyrose", "lightcyan",
                                                                               "lavender", "cornsilk"))
+ #Lo intenté con plot_ly de la librería ggplot, pero no pude :(                                                                             
