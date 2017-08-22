@@ -1,0 +1,7 @@
+X11()
+p<- plot_ly(x=c("Gpo1", "Gpo2", "Gpo3", "Gpo4", y=t, type="bar"), name = "Gpos edad")
+chart_link = api_create(p, filename="bar/basic")
+chart_link
+X11()
+barplot(t, main="Grupos de edad", xlab="Gpos edades",ylab="Cantidad", col = c("lightblue", "mistyrose", "lightcyan",
+                                                                              "lavender", "cornsilk"))
