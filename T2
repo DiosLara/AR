@@ -1,0 +1,4 @@
+conver <- as.numeric(mti2015$ENT)                  
+class (conver)                                       
+agzac <- subset (mti2015, cnver == 01 | cnver == 32)
+table(agzac$ENT)
