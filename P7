@@ -1,0 +1,37 @@
+#pRÁCRICA 7
+
+files
+library (foreign)
+
+mti15$RAMA2[mti$RAMA==1]<-1
+mti15$RAMA2[mti$RAMA==2| mti$RAMA==3]<-2
+mti15$RAMA2[mti$RAMA==4|mti$RAMA==5]<-3
+mti15$RAMA2[mti$RAMA==6|mti$RAMA==7]<-4
+
+table(mti15$RAMA2)
+table(mti15$EDA)
+
+#############################################################################
+
+
+mti15$EDA2 [mti15$EDA == 05 | mti15$EDA==06 | mti15$EDA== 07]<- 1
+mti15$EDA2 [mti15$EDA == 08 | mti15$EDA==09 | mti15$EDA== 10 | mti15$EDA== 11]<- 2
+mti15$EDA2 [mti15$EDA == 12 | mti15$EDA==13 | mti15$EDA== 14]<- 3
+mti15$EDA2 [mti15$EDA == 15 | mti15$EDA==16 | mti15$EDA== 17]<- 4
+
+
+mti15$EDA2 <- factor(mti15$EDA2, levels = c(1, 2, 3, 4), labels = c("Niñ@s", "Preado", "Ado", "Joven"))
+
+###
+mti15$EDA<- as.numeric(as.character(mti15$EDA))
+table(mti15$EDA)
+mti15$GPOEDA[mti15$EDA>=5  & mti15$EDA<=7] <- 1
+mti15$GPOEDA[mti15$EDA>=8  & mti15$EDA<=11]<- 2
+mti15$GPOEDA[mti15$EDA>=12 & mti15$EDA<=14]<- 3
+mti15$GPOEDA[mti15$EDA>=15  & mti15$EDA<=17]<-4
+table(mti15$GPOEDA)
+require (questionr)
+mti15$GEOEDA <- factor(mti15$GPOEDA, levels = c(1, 2, 3, 4), labels = c("Niñ@s", "Preado", "Ado", "Joven"))
+t<-wtd.table(mti15$GPOEDA, weights = mti15$FAC_MTI)
+t
+write.csv(t, file= "Practicaex.csv")
