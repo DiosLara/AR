@@ -1,0 +1,8 @@
+#Datos: 
+#Área de superficie ocular(OSA)
+#ancho de la apertura del ojo 
+#En éste caso Y sería OSA y X= será el ancho de la apertura del ojo. 
+Xi<- c(.4,.42,.48,.51,.57,.60,.70,.75,.75,.78)
+OSA<- c(1.02,1.21,.88,.98,1.52,1.83,1.50,1.80,1.74,1.63)
+plot(Xi,OSA, main= "Apertura del ojo VS Área de la superficie")
+
